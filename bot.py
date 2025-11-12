@@ -25,7 +25,8 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f"Pong! Gecikme süresi: {round(bot.latency * 1000)}ms")
+    await ctx.send(f"{round(bot.latency * 1000)}ms")
+
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
