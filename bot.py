@@ -1,7 +1,10 @@
 import discord
 from discord.ext import commands
-
-token = "TOKENİ BURAYA YAZIN"
+import os
+from dotenv import load_dotenv
+load_dotenv()  # .env dosyasını yükle
+# Bundan sonra .env kullanıcam token = "TOKENİ BURAYA YAZIN"
+token = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.messages = True
